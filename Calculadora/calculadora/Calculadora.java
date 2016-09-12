@@ -4,25 +4,29 @@ import java.io.*;
 
 /**
  *
- * @author Mauricio Sánchez Calculadora en JAVA
+ * @author Mauricio Sánchez 
+ * Calculadora en JAVA
  */
 public class Calculadora {
 
     public static void main(String[] args) {
         try {
 
-            // Se crea las variables	
+            // Se crea las variables    
             int num1, num2, operar;
             // Se crea el buffer de almacenamiento
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-            System.out.println("/*************************/");
-            System.out.println("/****** CALCULADORA ******/");
-            System.out.print("Ingrese el primer Numero (Debe ser el mayor de los dos) : ");
-            num1 = Integer.parseInt(br.readLine());
-            System.out.print("Ingrese el segundo Numero: ");
-            num2 = Integer.parseInt(br.readLine());
-            System.out.println("/*************************/");
+            do {
+                System.out.println("/*************************/");
+                System.out.println("/****** CALCULADORA ******/");
+                System.out.print("Ingrese el primer Numero (Debe ser el mayor de los dos) : ");
+                num1 = Integer.parseInt(br.readLine());
+                System.out.print("Ingrese el segundo Numero: ");
+                num2 = Integer.parseInt(br.readLine());
+                System.out.println("/*************************/");
+            } while (num1 < num2);
+
             do {
                 System.out.println("/** MENU DE OPERACIONES **/");
                 System.out.println("1. SUMAR");
@@ -35,7 +39,7 @@ public class Calculadora {
                 System.out.println("8. SALIR");
                 System.out.println("Ingrese Opcion a ejecutar: ");
                 operar = Integer.parseInt(br.readLine());
-                
+
                 // Logica del programa
                 System.out.println("/*************************/");
                 if (operar == 1) {
